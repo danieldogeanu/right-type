@@ -17,9 +17,23 @@ export function isString(string, empty = false) {
     (typeof string === 'string')
 }
 
+/**
+ * Check to see if the value provided is a number.
+ * By default it also checks to see it the number is not zero and returns false if it is.
+ * @param {number} number The value to be tested.
+ * @param {boolean} empty Whether to allow zero or not.
+ */
+export function isNumber(number, empty = false) {
+  return (empty) ? (typeof number === 'number' && !isNaN(number)) :
+    (typeof number === 'number' && !isNaN(number) && number !== 0)
+}
+
+// -----------------------------------------------------------------------------
+
 // Interface for default exports.
 const rightType = {
   isString,
+  isNumber,
 }
 
 // Make exports compatible with both ES6 and Node.
