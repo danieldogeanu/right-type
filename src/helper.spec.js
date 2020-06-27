@@ -20,6 +20,15 @@ export function makeTitle(title) {
 
 
 /**
+ * Function that adds new line after each describe section.
+ * This is only to make tests more readable in the console.
+ */
+export function sectionSpacing() {
+  after(() => console.log('\n'))
+}
+
+
+/**
  * Function that creates and runs batch tests for all primitive JavaScript types.
  * @param {string} type The name of the type to return true for.
  * @param {function} method The function/method to batch tests against.
@@ -55,5 +64,6 @@ export function runBatchTypeTests(type, method) {
 
 export default {
   makeTitle,
+  sectionSpacing,
   runBatchTypeTests,
 }

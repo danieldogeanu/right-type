@@ -1,16 +1,18 @@
 import {expect} from 'chai'
-import {makeTitle, runBatchTypeTests} from './helper.spec'
+import {makeTitle, sectionSpacing, runBatchTypeTests} from './helper.spec'
 import rightType from './index'
 
 describe(makeTitle('Right Type'), () => {
 
-  describe('isString', () => {
+  describe('isString()', () => {
 
     runBatchTypeTests('string', rightType.isString)
 
+    sectionSpacing()
+
   })
 
-  describe('isNumber', () => {
+  describe('isNumber()', () => {
 
     runBatchTypeTests('number', rightType.isNumber)
 
@@ -21,6 +23,8 @@ describe(makeTitle('Right Type'), () => {
     it('returns false for zero with empty flag set to false', () => {
       expect(rightType.isNumber(0, false)).to.equal(false)
     })
+
+    sectionSpacing()
 
   })
 
