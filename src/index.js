@@ -12,9 +12,8 @@
  * @param {boolean} empty Whether to allow empty strings or not.
  */
 export function isString(string, empty = false) {
-  return (!empty) ?
-    (typeof string === 'string' && string !== '') :
-    (typeof string === 'string')
+  return (empty) ? (typeof string === 'string') :
+    (typeof string === 'string' && string !== '')
 }
 
 /**
