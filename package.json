@@ -24,8 +24,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./src/index.js",
-    "test": "mocha --require @babel/polyfill --require @babel/register './src/test/**/*spec.js'",
-    "coverage": "nyc mocha",
+    "test": "mocha --require @babel/polyfill --require @babel/register './src/**/*spec.js'",
+    "coverage": "nyc mocha --require @babel/polyfill --require @babel/register './src/**/*spec.js'",
     "show-coverage": "start ./coverage/index.html",
     "build": "webpack"
   },
@@ -45,6 +45,8 @@
     "reporter": [
       "text",
       "html"
-    ]
+    ],
+    "include": "src",
+    "exclude": "**/*spec.js"
   }
 }
