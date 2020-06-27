@@ -1,7 +1,8 @@
 import {expect} from 'chai'
+import {makeTitle} from './helper.spec'
 import rightType from './index'
 
-describe('Right Type -----------------------------------------------------------\r\n', () => {
+describe(makeTitle('Right Type'), () => {
 
   describe('isString', () => {
 
