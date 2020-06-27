@@ -23,6 +23,7 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
+    "start": "node ./src/index.js",
     "test": "mocha",
     "coverage": "nyc mocha",
     "show-coverage": "start ./coverage/index.html",
