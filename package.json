@@ -10,6 +10,15 @@
     "checking",
     "javascript"
   ],
+  "homepage": "https://github.com/danieldogeanu/right-type",
+  "bugs": {
+    "url": "https://github.com/danieldogeanu/right-type/issues",
+    "email": "contact@danieldogeanu.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danieldogeanu/right-type.git"
+  },
   "author": "Daniel Dogeanu <contact@danieldogeanu.com> (https://danieldogeanu.com/)",
   "license": "MIT",
   "main": "index.js",
