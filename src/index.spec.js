@@ -8,6 +8,14 @@ describe(makeTitle('Right Type'), () => {
 
     runBatchTypeTests('string', rightType.isString)
 
+    it('returns true for empty string with empty flag set to true', () => {
+      expect(rightType.isString('', true)).to.equal(true)
+    })
+
+    it('returns false for empty string with empty flag set to false', () => {
+      expect(rightType.isString('', false)).to.equal(false)
+    })
+
     sectionSpacing()
 
   })
