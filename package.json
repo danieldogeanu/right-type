@@ -1,0 +1,19 @@
+{
+  "name": "right-type",
+  "version": "0.1.0",
+  "description": "A simple utility for checking JavaScript types.",
+  "keywords": [
+    "simple",
+    "utility",
+    "right",
+    "type",
+    "checking",
+    "javascript"
+  ],
+  "author": "Daniel Dogeanu <contact@danieldogeanu.com> (https://danieldogeanu.com/)",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
