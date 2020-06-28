@@ -34,6 +34,7 @@ function runBatchTypeTests(type, method) {
 
   const allTypes = {
     undefined: undefined,
+    null: null,
     boolean: true,
     number: 543,
     string: 'test string',
