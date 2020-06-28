@@ -1,6 +1,6 @@
 import {expect} from 'chai'
 import {makeTitle, sectionSpacing} from './helper.spec'
-import rightType from './index'
+import types from './types'
 
 /**
  * Function that creates and runs batch tests for all primitive JavaScript types.
@@ -65,30 +65,30 @@ function runBatchTypeTests(type, method) {
 describe(makeTitle('Right Type'), () => {
 
   describe('isString()', () => {
-    runBatchTypeTests('string', rightType.isString)
+    runBatchTypeTests('string', types.isString)
     sectionSpacing()
   })
 
   describe('isNumber()', () => {
-    runBatchTypeTests('number', rightType.isNumber)
+    runBatchTypeTests('number', types.isNumber)
     sectionSpacing()
   })
 
   describe('isBoolean()', () => {
-    runBatchTypeTests('boolean', rightType.isBoolean)
+    runBatchTypeTests('boolean', types.isBoolean)
     it('returns true for false boolean', () => {
-      expect(rightType.isBoolean(false)).to.equal(true)
+      expect(types.isBoolean(false)).to.equal(true)
     })
     sectionSpacing()
   })
 
   describe('isArray()', () => {
-    runBatchTypeTests('array', rightType.isArray)
+    runBatchTypeTests('array', types.isArray)
     sectionSpacing()
   })
 
   describe('isObject()', () => {
-    runBatchTypeTests('object', rightType.isObject)
+    runBatchTypeTests('object', types.isObject)
     sectionSpacing()
   })
 
