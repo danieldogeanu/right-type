@@ -87,5 +87,10 @@ describe(makeTitle('Right Type'), () => {
     sectionSpacing()
   })
 
+  describe('isObject()', () => {
+    runBatchTypeTests('object', rightType.isObject)
+    sectionSpacing()
+  })
+
 })
 

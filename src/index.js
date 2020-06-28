@@ -46,6 +46,19 @@ export function isArray(array, allowEmpty = false) {
     (Array.isArray(array) && array.length > 0)
 }
 
+/**
+ * Check to see if the value provided is an object.
+ * By default it also checks to see if the object is not empty and returns false if it is.
+ * @param {object} object The value to be tested.
+ * @param {boolean} allowEmpty Whether to allow empty object or not.
+ */
+export function isObject(object, allowEmpty = false) {
+  if (object === null || object === undefined) return false
+  const isValidObject = (typeof object === 'object')
+  const isNotEmptyObject = (Object.keys(object).length > 0 && object.constructor === Object)
+  return (allowEmpty) ? isValidObject : (isValidObject && isNotEmptyObject)
+}
+
 // -----------------------------------------------------------------------------
 
 // Interface for default exports.
@@ -54,6 +67,7 @@ const rightType = {
   isNumber,
   isBoolean,
   isArray,
+  isObject,
 }
 
 // Make exports compatible with both ES6 and Node.
