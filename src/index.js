@@ -35,6 +35,17 @@ export function isBoolean(boolean) {
   return (typeof boolean === 'boolean')
 }
 
+/**
+ * Check to see if the value provided is an array.
+ * By default it also checks to see if the array is not empty and returns false if it is.
+ * @param {array} array The value to be tested.
+ * @param {boolean} allowEmpty Whether to allow empty array or not.
+ */
+export function isArray(array, allowEmpty = false) {
+  return (allowEmpty) ? Array.isArray(array) :
+    (Array.isArray(array) && array.length > 0)
+}
+
 // -----------------------------------------------------------------------------
 
 // Interface for default exports.
@@ -42,6 +53,7 @@ const rightType = {
   isString,
   isNumber,
   isBoolean,
+  isArray,
 }
 
 // Make exports compatible with both ES6 and Node.

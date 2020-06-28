@@ -82,5 +82,10 @@ describe(makeTitle('Right Type'), () => {
     sectionSpacing()
   })
 
+  describe('isArray()', () => {
+    runBatchTypeTests('array', rightType.isArray)
+    sectionSpacing()
+  })
+
 })
 
