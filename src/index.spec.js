@@ -11,9 +11,25 @@ function runBatchTypeTests(type, method) {
   if (typeof type !== 'string' && typeof method !== 'function') return
 
   const typeMatcher = (passed, expected) => (passed === expected)
+  const getEmptyWord = (checkType) => {
+    switch(checkType) {
+      case 'number': return 'zero'
+      case 'boolean': return 'false'
+      default: return 'empty'
+    }
+  }
+
   const runTestFor = (chosenType, testValue) => {
     it(`returns ${typeMatcher(type, chosenType)} for ${chosenType}`, () => {
       expect(method(testValue)).to.equal(typeMatcher(type, chosenType))
+    })
+  }
+  const runEmptyTestFor = (chosenType, testValue) => {
+    it(`returns true for ${getEmptyWord(chosenType)} ${chosenType} with allowEmpty flag set to true`, () => {
+      expect(method(testValue, true)).to.equal(true)
+    })
+    it(`returns false for ${getEmptyWord(chosenType)} ${chosenType} with allowEmpty flag set to false`, () => {
+      expect(method(testValue, false)).to.equal(false)
     })
   }
 
@@ -28,9 +44,21 @@ function runBatchTypeTests(type, method) {
     object: {one: 1, two: 2, three: 3},
     function: () => true,
   }
+  const emptyTypes = {
+    boolean: false,
+    number: 0,
+    string: '',
+    array: [],
+    object: {},
+  }
 
-  Object.keys(allTypes).forEach(type => {
-    runTestFor(type, allTypes[type])
+  Object.keys(allTypes).forEach(currType => {
+    runTestFor(currType, allTypes[currType])
+  })
+  Object.keys(emptyTypes).forEach(currType => {
+    if (typeMatcher(currType, type)) {
+      runEmptyTestFor(currType, emptyTypes[currType])
+    }
   })
 }
 
@@ -39,35 +67,13 @@ function runBatchTypeTests(type, method) {
 describe(makeTitle('Right Type'), () => {
 
   describe('isString()', () => {
-
     runBatchTypeTests('string', rightType.isString)
-
-    it('returns true for empty string with empty flag set to true', () => {
-      expect(rightType.isString('', true)).to.equal(true)
-    })
-
-    it('returns false for empty string with empty flag set to false', () => {
-      expect(rightType.isString('', false)).to.equal(false)
-    })
-
     sectionSpacing()
-
   })
 
   describe('isNumber()', () => {
-
     runBatchTypeTests('number', rightType.isNumber)
-
-    it('returns true for zero with empty flag set to true', () => {
-      expect(rightType.isNumber(0, true)).to.equal(true)
-    })
-
-    it('returns false for zero with empty flag set to false', () => {
-      expect(rightType.isNumber(0, false)).to.equal(false)
-    })
-
     sectionSpacing()
-
   })
 
 })
