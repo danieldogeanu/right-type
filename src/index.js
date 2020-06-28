@@ -27,12 +27,21 @@ export function isNumber(number, allowEmpty = false) {
     (typeof number === 'number' && !isNaN(number) && number !== 0)
 }
 
+/**
+ * Check to see if the value provided is a boolean.
+ * @param {boolean} boolean The value to be tested.
+ */
+export function isBoolean(boolean) {
+  return (typeof boolean === 'boolean')
+}
+
 // -----------------------------------------------------------------------------
 
 // Interface for default exports.
 const rightType = {
   isString,
   isNumber,
+  isBoolean,
 }
 
 // Make exports compatible with both ES6 and Node.

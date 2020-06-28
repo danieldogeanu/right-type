@@ -14,7 +14,6 @@ function runBatchTypeTests(type, method) {
   const getEmptyWord = (checkType) => {
     switch(checkType) {
       case 'number': return 'zero'
-      case 'boolean': return 'false'
       default: return 'empty'
     }
   }
@@ -45,7 +44,6 @@ function runBatchTypeTests(type, method) {
     function: () => true,
   }
   const emptyTypes = {
-    boolean: false,
     number: 0,
     string: '',
     array: [],
@@ -73,6 +71,14 @@ describe(makeTitle('Right Type'), () => {
 
   describe('isNumber()', () => {
     runBatchTypeTests('number', rightType.isNumber)
+    sectionSpacing()
+  })
+
+  describe('isBoolean()', () => {
+    runBatchTypeTests('boolean', rightType.isBoolean)
+    it('returns true for false boolean', () => {
+      expect(rightType.isBoolean(false)).to.equal(true)
+    })
     sectionSpacing()
   })
 
