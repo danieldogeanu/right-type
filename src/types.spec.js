@@ -93,5 +93,10 @@ describe(makeTitle('Right Type'), () => {
     sectionSpacing()
   })
 
+  describe('isFunction()', () => {
+    runBatchTypeTests('function', types.isFunction)
+    sectionSpacing()
+  })
+
 })
 

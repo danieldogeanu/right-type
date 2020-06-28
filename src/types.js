@@ -55,6 +55,15 @@ export function isObject(object, allowEmpty = false) {
   return (allowEmpty) ? isValidObject : (isValidObject && isNotEmptyObject)
 }
 
+/**
+ * Check to see if the value provided is a function.
+ * @param {function} func The value to be tested.
+ */
+export function isFunction(func) {
+  return ((typeof func === 'function') || (func instanceof Function) ||
+    (Object.prototype.toString.call(func).indexOf("Function") > -1))
+}
+
 // -----------------------------------------------------------------------------
 
 // Interface for default exports.
@@ -64,6 +73,7 @@ const types = {
   isBoolean,
   isArray,
   isObject,
+  isFunction,
 }
 
 // Make exports compatible with both ES6 and Node.
