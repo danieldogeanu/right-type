@@ -23,9 +23,8 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "start": "node ./src/index.js",
+    "start": "mocha --watch",
     "test": "mocha",
-    "test:watch": "mocha --watch",
     "coverage": "nyc mocha",
     "show-coverage": "start ./coverage/index.html",
     "build": "babel src --out-dir lib"
