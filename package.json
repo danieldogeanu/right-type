@@ -28,9 +28,10 @@
     "test:watch": "mocha --watch",
     "coverage": "nyc mocha",
     "show-coverage": "start ./coverage/index.html",
-    "build": "webpack"
+    "build": "babel src --out-dir lib"
   },
   "devDependencies": {
+    "@babel/cli": "^7.10.3",
     "@babel/core": "^7.10.3",
     "@babel/polyfill": "^7.10.1",
     "@babel/preset-env": "^7.10.3",
