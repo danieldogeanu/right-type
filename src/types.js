@@ -67,7 +67,7 @@ export function isFunction(func) {
 // -----------------------------------------------------------------------------
 
 // Interface for default exports.
-const types = {
+export default {
   isString,
   isNumber,
   isBoolean,
@@ -75,7 +75,3 @@ const types = {
   isObject,
   isFunction,
 }
-
-// Make exports compatible with both ES6 and Node.
-export default types
-module.exports = types

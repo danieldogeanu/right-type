@@ -7,11 +7,6 @@
 
 import types from './types'
 
-// Interface for default exports.
-const rightType = {
+export default {
   ...types,
 }
-
-// Make exports compatible with both ES6 and Node.
-export default rightType
-module.exports = rightType
