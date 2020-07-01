@@ -71,6 +71,6 @@
       "@babel/polyfill",
       "@babel/register"
     ],
-    "spec": "./src/**/*+(spec|test).js"
+    "spec": "./tests/**/*+(spec|test).js"
   }
 }

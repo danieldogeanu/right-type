@@ -1,6 +1,6 @@
 const expect = require('chai').expect
-const {makeTitle, sectionSpacing} = require('./tests-helper')
-const types = require('./types')
+const {makeTitle, sectionSpacing} = require('./helper')
+const types = require('../src/types')
 
 /**
  * Function that creates and runs batch tests for all primitive JavaScript types.
