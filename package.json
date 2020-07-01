@@ -21,7 +21,7 @@
   },
   "author": "Daniel Dogeanu <contact@danieldogeanu.com> (https://danieldogeanu.com/)",
   "license": "MIT",
-  "main": "lib/index.js",
+  "main": "./lib/index.js",
   "private": false,
   "engines": {
     "node": ">=6.17.1"
