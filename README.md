@@ -12,15 +12,15 @@ In fact I recommend you doing the same. You can install this package, import it 
 
 Also, this is **_NOT_** a form validation package! In fact this is also a reason I created this package. Most validation packages out there are form validators, not type validators.
 
-## Installation
+## Getting Started
+
+### Installation
 
 To install this package, simply run the command bellow in your terminal:
 
 ```
 npm install right-type
 ```
-
-## Getting Started
 
 ### Importing
 
