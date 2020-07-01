@@ -1,12 +1,11 @@
 /**
  * A simple utility for checking JavaScript types for people who don't want to
  * use complicated solutions like TypeScript or Flow.
+ * -----------------------------------------------------------------------------
  */
 
-// -----------------------------------------------------------------------------
+const types = require('./types')
 
-import types from './types'
-
-export default {
+module.exports = {
   ...types,
 }

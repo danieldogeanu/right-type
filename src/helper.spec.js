@@ -9,7 +9,7 @@
  * @param {string} title The title you wish to format.
  * @returns {string} Returns a fancy title string.
  */
-export function makeTitle(title) {
+function makeTitle(title) {
   const dash = '-'
   const line = dash.repeat(50 - title.split('').length)
   return `${title} ${line}\n`
@@ -20,13 +20,13 @@ export function makeTitle(title) {
  * Function that adds new line after each describe section.
  * This is only to make tests more readable in the console.
  */
-export function sectionSpacing() {
+function sectionSpacing() {
   after(() => console.log('\n'))
 }
 
 // -----------------------------------------------------------------------------
 
-export default {
+module.exports = {
   makeTitle,
   sectionSpacing,
 }

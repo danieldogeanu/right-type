@@ -1,6 +1,6 @@
-import {expect} from 'chai'
-import {makeTitle, sectionSpacing} from './helper.spec'
-import types from './types'
+const expect = require('chai').expect
+const {makeTitle, sectionSpacing} = require('./helper.spec')
+const types = require('./types')
 
 /**
  * Function that creates and runs batch tests for all primitive JavaScript types.

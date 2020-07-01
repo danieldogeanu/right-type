@@ -7,7 +7,7 @@
  * @param {string} string The value to be tested.
  * @param {boolean} allowEmpty Whether to allow empty strings or not.
  */
-export function isString(string, allowEmpty = false) {
+function isString(string, allowEmpty = false) {
   return (allowEmpty) ? (typeof string === 'string') :
     (typeof string === 'string' && string !== '')
 }
@@ -18,7 +18,7 @@ export function isString(string, allowEmpty = false) {
  * @param {number} number The value to be tested.
  * @param {boolean} allowEmpty Whether to allow zero or not.
  */
-export function isNumber(number, allowEmpty = false) {
+function isNumber(number, allowEmpty = false) {
   return (allowEmpty) ? (typeof number === 'number' && !isNaN(number)) :
     (typeof number === 'number' && !isNaN(number) && number !== 0)
 }
@@ -27,7 +27,7 @@ export function isNumber(number, allowEmpty = false) {
  * Check to see if the value provided is a boolean.
  * @param {boolean} boolean The value to be tested.
  */
-export function isBoolean(boolean) {
+function isBoolean(boolean) {
   return (typeof boolean === 'boolean')
 }
 
@@ -37,7 +37,7 @@ export function isBoolean(boolean) {
  * @param {array} array The value to be tested.
  * @param {boolean} allowEmpty Whether to allow empty array or not.
  */
-export function isArray(array, allowEmpty = false) {
+function isArray(array, allowEmpty = false) {
   return (allowEmpty) ? Array.isArray(array) :
     (Array.isArray(array) && array.length > 0)
 }
@@ -48,7 +48,7 @@ export function isArray(array, allowEmpty = false) {
  * @param {object} object The value to be tested.
  * @param {boolean} allowEmpty Whether to allow empty object or not.
  */
-export function isObject(object, allowEmpty = false) {
+function isObject(object, allowEmpty = false) {
   if (object === null || object === undefined) return false
   const isValidObject = (typeof object === 'object')
   const isNotEmptyObject = (Object.keys(object).length > 0 && object.constructor === Object)
@@ -59,15 +59,14 @@ export function isObject(object, allowEmpty = false) {
  * Check to see if the value provided is a function.
  * @param {function} func The value to be tested.
  */
-export function isFunction(func) {
+function isFunction(func) {
   return ((typeof func === 'function') || (func instanceof Function) ||
     (Object.prototype.toString.call(func).indexOf("Function") > -1))
 }
 
 // -----------------------------------------------------------------------------
 
-// Interface for default exports.
-export default {
+module.exports = {
   isString,
   isNumber,
   isBoolean,
