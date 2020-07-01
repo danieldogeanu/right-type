@@ -21,13 +21,14 @@
   },
   "author": "Daniel Dogeanu <contact@danieldogeanu.com> (https://danieldogeanu.com/)",
   "license": "MIT",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "start": "mocha --watch",
     "test": "mocha",
     "coverage": "nyc mocha",
     "show-coverage": "http-server coverage -o",
-    "build": "babel src --out-dir lib"
+    "build": "babel src --out-dir lib",
+    "prepare": "npm run build"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.3",
