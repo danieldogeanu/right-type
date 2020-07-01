@@ -72,3 +72,5 @@ isArray([], true) // true
 isObject({}) // false
 isObject({}, true) // true
 ```
+
+By default these methods don't allow for empty values, but in some cases you might need to use empty values in your code. The `allowEmpty` parameter is not present on all methods, because on some of them it doesn't make any sense to have one.
