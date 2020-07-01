@@ -26,7 +26,7 @@
     "start": "mocha --watch",
     "test": "mocha",
     "coverage": "nyc mocha",
-    "show-coverage": "start ./coverage/index.html",
+    "show-coverage": "http-server coverage -o",
     "build": "babel src --out-dir lib"
   },
   "devDependencies": {
@@ -36,6 +36,7 @@
     "@babel/preset-env": "^7.10.3",
     "@babel/register": "^7.10.3",
     "chai": "^4.2.0",
+    "http-server": "^0.12.3",
     "mocha": "^8.0.1",
     "nyc": "^15.1.0"
   },
@@ -43,7 +44,11 @@
     "presets": [
       [
         "@babel/preset-env",
-        {"targets": {"node": "6.17.1"}}
+        {
+          "targets": {
+            "node": "6.17.1"
+          }
+        }
       ]
     ]
   },
