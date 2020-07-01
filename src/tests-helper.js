@@ -1,5 +1,4 @@
 // Helper Functions for Tests
-// NOTE: We named this file .spec.js because we don't want it included in the final package.
 // -----------------------------------------------------------------------------
 
 

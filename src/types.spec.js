@@ -1,5 +1,5 @@
 const expect = require('chai').expect
-const {makeTitle, sectionSpacing} = require('./helper.spec')
+const {makeTitle, sectionSpacing} = require('./tests-helper')
 const types = require('./types')
 
 /**
