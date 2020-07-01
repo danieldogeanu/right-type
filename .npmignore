@@ -1,5 +1,6 @@
 
 # dependencies
+node_modules/
 .pnp/
 .pnp.js
 
@@ -15,6 +16,7 @@ out/
 
 # development
 src/
+.editorconfig
 
 # os
 .DS_Store
