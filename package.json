@@ -36,7 +36,7 @@
     "coverage": "nyc mocha",
     "show-coverage": "http-server coverage -o",
     "build": "babel src --out-dir lib",
-    "prepare": "npm run build"
+    "prepare": "npm test && npm run build"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.4",
