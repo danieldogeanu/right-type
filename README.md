@@ -74,3 +74,61 @@ isObject({}, true) // true
 ```
 
 By default these methods don't allow for empty values, but in some cases you might need to use empty values in your code. The `allowEmpty` parameter is not present on all methods, because on some of them it doesn't make any sense to have one.
+
+## Methods
+
+### Types
+
+<br />
+
+#### `isString( string: any, allowEmpty?: boolean ): boolean`
+
+Method that checks to see if the value provided is a string. By default it also checks to see if the string is empty and returns false if it is.
+
+- `string: any` - The value to be tested.
+- `allowEmpty?: boolean` (optional) - Whether to allow empty strings or not. Default value is `false`.
+
+<br />
+
+#### `isNumber( number: any, allowEmpty?: boolean ): boolean`
+
+Method that checks to see if the value provided is a number. By default it also checks to see it the number is not zero and returns false if it is.
+
+- `number: any` - The value to be tested.
+- `allowEmpty?: boolean` (optional) - Whether to allow zero or not. Default value is `false`.
+
+<br />
+
+#### `isBoolean( boolean: any ): boolean`
+
+Method that checks to see if the value provided is a boolean.
+
+- `boolean: any` - The value to be tested.
+
+<br />
+
+#### `isArray( array: any, allowEmpty?: boolean ): boolean`
+
+Method that checks to see if the value provided is an array. By default it also checks to see if the array is not empty and returns false if it is.
+
+- `array: any` - The value to be tested.
+- `allowEmpty?: boolean` (optional) - Whether to allow empty array or not. Default value is `false`.
+
+<br />
+
+#### `isObject( object: any, allowEmpty?: boolean ): boolean`
+
+Method that checks to see if the value provided is an object. By default it also checks to see if the object is not empty and returns false if it is.
+
+- `object: any` - The value to be tested.
+- `allowEmpty?: boolean` (optional) - Whether to allow empty object or not. Default value is `false`.
+
+<br />
+
+#### `isFunction( func: any ): boolean`
+
+Method that checks to see if the value provided is a function.
+
+- `func: any` - The value to be tested.
+
+<br />
