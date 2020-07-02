@@ -2,6 +2,8 @@
 
 A simple utility for checking JavaScript types for people who don't want to use complicated solutions like TypeScript or Flow.
 
+<br />
+
 ## Motivation
 
 I kept finding myself doing the same type of validation logic over and over in some of my projects and I thought I should extract it into a separate package and use it on all of my projects or maybe to even help others.
@@ -11,6 +13,8 @@ Now, you might say that this kind of type validation is already built in into Ja
 In fact I recommend you doing the same. You can install this package, import it into that file, and build more complex validation logic there. You can then re-export the methods from this package along with your own, and import that file all over your project, where you need validation.
 
 Also, this is **_NOT_** a form validation package! In fact this is also a reason I created this package. Most validation packages out there are form validators, not type validators.
+
+<br />
 
 ## Getting Started
 
@@ -74,6 +78,8 @@ isObject({}, true) // true
 ```
 
 By default these methods don't allow for empty values, but in some cases you might need to use empty values in your code. The `allowEmpty` parameter is not present on all methods, because on some of them it doesn't make any sense to have one.
+
+<br />
 
 ## Methods
 
