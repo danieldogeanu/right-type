@@ -1,3 +1,4 @@
+const chalk = require('chalk')
 const expect = require('chai').expect
 const {makeTitle, sectionSpacing} = require('./helper')
 const types = require('../src/types')
@@ -19,12 +20,13 @@ function runBatchTypeTests(type, method) {
   }
 
   const runTestFor = (chosenType, testValue) => {
-    it(`returns ${typeMatcher(type, chosenType)} for ${chosenType}`, () => {
+    const titleText = `returns ${typeMatcher(type, chosenType)} for ${chosenType}`
+    it(typeMatcher(type, chosenType) ? chalk.green(titleText) : titleText, () => {
       expect(method(testValue)).to.equal(typeMatcher(type, chosenType))
     })
   }
   const runEmptyTestFor = (chosenType, testValue) => {
-    it(`returns true for ${getEmptyWord(chosenType)} ${chosenType} with allowEmpty flag set to true`, () => {
+    it(chalk.green(`returns true for ${getEmptyWord(chosenType)} ${chosenType} with allowEmpty flag set to true`), () => {
       expect(method(testValue, true)).to.equal(true)
     })
     it(`returns false for ${getEmptyWord(chosenType)} ${chosenType} with allowEmpty flag set to false`, () => {
@@ -77,7 +79,7 @@ describe(makeTitle('Right Type'), () => {
 
   describe('isBoolean()', () => {
     runBatchTypeTests('boolean', types.isBoolean)
-    it('returns true for false boolean', () => {
+    it(chalk.green('returns true for false boolean'), () => {
       expect(types.isBoolean(false)).to.equal(true)
     })
     sectionSpacing()
