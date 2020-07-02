@@ -35,7 +35,8 @@
     "test": "mocha",
     "coverage": "nyc mocha",
     "show-coverage": "http-server coverage -o",
-    "build": "babel src --out-dir lib",
+    "delete": "del-cli lib",
+    "build": "npm run delete && babel src --out-dir lib",
     "prepare": "npm test && npm run build"
   },
   "devDependencies": {
@@ -46,6 +47,7 @@
     "chai": "^4.2.0",
     "chalk": "^4.1.0",
     "core-js": "^3.6.5",
+    "del-cli": "^3.0.1",
     "http-server": "^0.12.3",
     "mocha": "^8.0.1",
     "nyc": "^15.1.0",
