@@ -4,7 +4,7 @@
 /**
  * Check to see if the value provided is a string.
  * By default it also checks to see if the string is empty and returns false if it is.
- * @param {string} string The value to be tested.
+ * @param {any} string The value to be tested.
  * @param {boolean} allowEmpty Whether to allow empty strings or not.
  */
 function isString(string, allowEmpty = false) {
@@ -15,7 +15,7 @@ function isString(string, allowEmpty = false) {
 /**
  * Check to see if the value provided is a number.
  * By default it also checks to see it the number is not zero and returns false if it is.
- * @param {number} number The value to be tested.
+ * @param {any} number The value to be tested.
  * @param {boolean} allowEmpty Whether to allow zero or not.
  */
 function isNumber(number, allowEmpty = false) {
@@ -25,7 +25,7 @@ function isNumber(number, allowEmpty = false) {
 
 /**
  * Check to see if the value provided is a boolean.
- * @param {boolean} boolean The value to be tested.
+ * @param {any} boolean The value to be tested.
  */
 function isBoolean(boolean) {
   return (typeof boolean === 'boolean')
@@ -34,7 +34,7 @@ function isBoolean(boolean) {
 /**
  * Check to see if the value provided is an array.
  * By default it also checks to see if the array is not empty and returns false if it is.
- * @param {array} array The value to be tested.
+ * @param {any} array The value to be tested.
  * @param {boolean} allowEmpty Whether to allow empty array or not.
  */
 function isArray(array, allowEmpty = false) {
@@ -45,7 +45,7 @@ function isArray(array, allowEmpty = false) {
 /**
  * Check to see if the value provided is an object.
  * By default it also checks to see if the object is not empty and returns false if it is.
- * @param {object} object The value to be tested.
+ * @param {any} object The value to be tested.
  * @param {boolean} allowEmpty Whether to allow empty object or not.
  */
 function isObject(object, allowEmpty = false) {
@@ -57,7 +57,7 @@ function isObject(object, allowEmpty = false) {
 
 /**
  * Check to see if the value provided is a function.
- * @param {function} func The value to be tested.
+ * @param {any} func The value to be tested.
  */
 function isFunction(func) {
   return ((typeof func === 'function') || (func instanceof Function) ||
