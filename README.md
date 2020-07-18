@@ -70,6 +70,8 @@ In order to use the ES Modules `import` syntax, you need to add `"type": "module
 
 *NOTE 2: If you're using Webpack and Babel, you don't need to worry about using the `import` syntax.*
 
+*NOTE 3: Import destructuring (`import {isString} from 'right-type'`) only works if you use Webpack and Babel, as this is by default a CommonJS package and doesn't have named exports.*
+
 ### Usage
 
 And later in your code you can use it like so:
