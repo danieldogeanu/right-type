@@ -1,6 +1,6 @@
-![npm](https://img.shields.io/npm/v/right-type?color=%231E88E5&label=right-type&style=flat-square)
-![node-current](https://img.shields.io/node/v/right-type?color=%2368A063&style=flat-square)
-![NPM](https://img.shields.io/npm/l/right-type?style=flat-square)
+[![npm](https://img.shields.io/npm/v/right-type?color=%231E88E5&label=right-type&style=flat-square)](https://www.npmjs.com/package/right-type)
+[![node-current](https://img.shields.io/node/v/right-type?color=%2368A063&style=flat-square)](https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V6.md#6.17.1)
+[![NPM](https://img.shields.io/npm/l/right-type?style=flat-square)](https://github.com/danieldogeanu/right-type/blob/main/LICENSE)
 
 # Right Type
 
