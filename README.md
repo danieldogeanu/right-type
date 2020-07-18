@@ -1,3 +1,7 @@
+![npm](https://img.shields.io/npm/v/right-type?color=%231E88E5&label=right-type&style=flat-square)
+![node-current](https://img.shields.io/node/v/right-type?color=%2368A063&style=flat-square)
+![NPM](https://img.shields.io/npm/l/right-type?style=flat-square)
+
 # Right Type
 
 A simple utility for checking JavaScript types for people who don't want to use complicated solutions like TypeScript or Flow.
