@@ -33,7 +33,7 @@ To use this package, you import it in your files like so:
 // CommonJS
 const rightType = require('right-type')
 
-// ES6 Modules
+// ES Modules
 import rightType from 'right-type'
 ```
 
@@ -45,9 +45,30 @@ const isString = require('right-type).isString
 // CommonJS with Destructuring
 const {isString, isNumber, isObject} = require('right-type')
 
-// ES6 Modules with Destructuring
+// ES Modules with Destructuring
 import {isString, isNumber, isObject} from 'right-type'
 ```
+
+In order to use the ES Modules `import` syntax, you need to add `"type": "module"` field in your `package.json` and run your program using the `--experimental-modules` flag:
+
+```
+// package.json
+{
+  "name": "my-package",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --experimental-modules index.js",
+    ...
+  },
+  ...
+}
+```
+
+*NOTE 1: You need Node version 12.0.0 and above to use `--experimental-modules` flag. If you're using version 12.17.0 (LTS), the flag isn't needed anymore and you can just add `"type": "module"` in your `package.json`.*
+
+*NOTE 2: If you're using Webpack and Babel, you don't need to worry about using the `import` syntax.*
 
 ### Usage
 
