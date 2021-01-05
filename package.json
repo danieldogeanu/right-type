@@ -38,7 +38,8 @@
     "show-coverage": "http-server coverage -o",
     "delete": "del-cli lib",
     "build": "npm run delete && babel src --out-dir lib",
-    "prepare": "npm test && npm run build"
+    "prepare": "npm test && npm run build",
+    "force-update": "node scripts/update"
   },
   "devDependencies": {
     "@babel/cli": "^7.11.6",
