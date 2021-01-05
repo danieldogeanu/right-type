@@ -41,20 +41,6 @@
     "prepare": "npm test && npm run build",
     "force-update": "node scripts/update"
   },
-  "devDependencies": {
-    "@babel/cli": "^7.11.6",
-    "@babel/core": "^7.11.6",
-    "@babel/preset-env": "^7.11.5",
-    "@babel/register": "^7.11.5",
-    "chai": "^4.2.0",
-    "chalk": "^4.1.0",
-    "core-js": "^3.6.5",
-    "del-cli": "^3.0.1",
-    "http-server": "^0.12.3",
-    "mocha": "^8.1.3",
-    "nyc": "^15.1.0",
-    "regenerator-runtime": "^0.13.7"
-  },
   "babel": {
     "presets": [
       [
@@ -82,5 +68,19 @@
       "@babel/register"
     ],
     "spec": "./tests/**/*+(spec|test).js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/register": "^7.12.10",
+    "chai": "^4.2.0",
+    "chalk": "^4.1.0",
+    "core-js": "^3.8.2",
+    "del-cli": "^3.0.1",
+    "http-server": "^0.12.3",
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0",
+    "regenerator-runtime": "^0.13.7"
   }
 }
