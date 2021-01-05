@@ -35,11 +35,11 @@
     "start": "mocha --watch",
     "test": "mocha",
     "coverage": "nyc mocha",
-    "show-coverage": "http-server coverage -o",
+    "coverage:show": "http-server coverage -o",
     "delete": "del-cli lib",
     "build": "npm run delete && babel src --out-dir lib",
     "prepare": "npm test && npm run build",
-    "force-update": "node scripts/update"
+    "update:force": "node scripts/update"
   },
   "babel": {
     "presets": [
