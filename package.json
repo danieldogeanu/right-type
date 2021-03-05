@@ -35,7 +35,7 @@
     "start": "mocha --watch",
     "test": "mocha",
     "coverage": "nyc mocha",
-    "coverage:show": "http-server coverage -o",
+    "coverage:show": "nyc mocha && node scripts/open",
     "delete": "del-cli lib",
     "build": "npm run delete && babel src --out-dir lib",
     "prepare": "npm test && npm run build",
