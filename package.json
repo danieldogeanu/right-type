@@ -70,16 +70,16 @@
     "spec": "./tests/**/*+(spec|test).js"
   },
   "devDependencies": {
-    "@babel/cli": "^7.12.10",
-    "@babel/core": "^7.12.10",
-    "@babel/preset-env": "^7.12.11",
-    "@babel/register": "^7.12.10",
-    "chai": "^4.2.0",
+    "@babel/cli": "^7.13.0",
+    "@babel/core": "^7.13.8",
+    "@babel/preset-env": "^7.13.9",
+    "@babel/register": "^7.13.8",
+    "chai": "^4.3.3",
     "chalk": "^4.1.0",
-    "core-js": "^3.8.2",
+    "core-js": "^3.9.1",
     "del-cli": "^3.0.1",
     "http-server": "^0.12.3",
-    "mocha": "^8.2.1",
+    "mocha": "^8.3.0",
     "nyc": "^15.1.0",
     "regenerator-runtime": "^0.13.7"
   }
